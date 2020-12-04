@@ -39,12 +39,12 @@ providers: [
 
     ...
 ]
-``
+```
 
 SsrAppReady : this is class which tell our server when the app is ready: if all http request is completed for example
 SsrHttpNetworksStabler : this is the class which interact with http request, something like http interceptor.
 
-this is my classes :
+this is my classes:
 
 ```
 @Injectable({ providedIn: 'root' })
