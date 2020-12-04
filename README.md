@@ -4,6 +4,11 @@ this library is for projects which want angular universal without zonejs. I come
 
 this is the way.
 
+# What is the point 
+1. I hate zone.js it makes big app slowish and make difficult to read the errors stack trace.
+2. I gain better response time
+3. I can add splashscreen before the app is loading while ssr
+
 # usage
 ## 1.
 in your server.ts update :
