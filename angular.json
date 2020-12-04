@@ -3,5 +3,46 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "angular-universal-zoneless": {
+      "projectType": "library",
+      "root": "projects/angular-universal-zoneless",
+      "sourceRoot": "projects/angular-universal-zoneless/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/angular-universal-zoneless/tsconfig.lib.json",
+            "project": "projects/angular-universal-zoneless/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-universal-zoneless/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-universal-zoneless/src/test.ts",
+            "tsConfig": "projects/angular-universal-zoneless/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-universal-zoneless/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-universal-zoneless/tsconfig.lib.json",
+              "projects/angular-universal-zoneless/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-universal-zoneless"
 }
