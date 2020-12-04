@@ -9,6 +9,10 @@ this is the way.
 2. I gain better response time
 3. I can add splashscreen before the app is loading while ssr
 
+# install
+
+```npm i angular-universal-zoneless```
+
 # usage
 ## 1.
 in your server.ts update :
